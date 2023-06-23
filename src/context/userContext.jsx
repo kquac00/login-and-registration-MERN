@@ -11,7 +11,7 @@ export function UserContextProvider({ children }) {
 
     useEffect(() => {
         if (!user) {
-            axios.get('/profile')
+            axios.get('https://login-registration-dd5518b37eb7.herokuapp.com/profile')
                 .then(({ data }) => {
                     setUser(data)
                 })
@@ -22,7 +22,7 @@ export function UserContextProvider({ children }) {
     }, [user])
 
     const logout = () => {
-        axios.get('/logout')
+        axios.get('https://login-registration-dd5518b37eb7.herokuapp.com/logout')
             .then(() => {
                 setUser(null)
                 navigate('/')

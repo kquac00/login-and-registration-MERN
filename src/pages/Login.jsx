@@ -15,7 +15,7 @@ const Login = () => {
         e.preventDefault();
         const { email, password } = data
         try {
-            const { data } = await axios.post('/login', {
+            const { data } = await axios.post('https://login-registration-dd5518b37eb7.herokuapp.com/login', {
                 email,
                 password
             })
